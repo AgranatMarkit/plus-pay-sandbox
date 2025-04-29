@@ -30,20 +30,26 @@
                 transform: scale(0.98);
             }
             
-            a:last-child {
+            a:nth-child(2) {
                 margin-bottom: 0;
                 background-color: #FF3B30; /* red for close action */
             }
             
-            a:last-child:active {
+            a:nth-child(2):active {
                 background-color: #D70015;
             }
         </style>
     </head>
     <body>
-        <a href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-checkout%3Ffeature%3Dtest%26page%3Da%26place%3Db%26from%3Dc%26position%3D0">Open Checkout Bro (alicepro://open-checkout)</a>
-        <a href="ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-checkout%3Ffeature%3Dtest%26page%3Da%26place%3Db%26from%3Dc%26position%3D0">Open Checkout PP (alicepro://open-checkout)</a>
-        <a href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fclose-promo-checkout">Close Onboarding Bro (alicepro://close-promo-checkout)</a>
-        <a href="ya-search-app-open://?uri=alicepro%3A%2F%2Fclose-promo-checkout">Close Onboarding PP (alicepro://close-promo-checkout)</a>
+        <a id="openLink" href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-checkout%3Ffeature%3Dtest%26page%3Da%26place%3Db%26from%3Dc%26position%3D0">Open Checkout (alicepro://open-checkout)</a>
+        <a id="closeLink" href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fclose-promo-checkout">Close Onboarding (alicepro://close-promo-checkout)</a>
+
+        <script>
+            // Check if user agent contains YaApp_iOS/
+            if (navigator.userAgent.includes('YaApp_iOS/')) {
+                document.getElementById('openLink').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-checkout%3Ffeature%3Dtest%26page%3Da%26place%3Db%26from%3Dc%26position%3D0";
+                document.getElementById('closeLink').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fclose-promo-checkout";
+            }
+        </script>
     </body>
 </html>
