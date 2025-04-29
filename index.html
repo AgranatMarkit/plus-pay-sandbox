@@ -1,8 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                padding: 20px;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            a {
+                display: block;
+                background-color: #007AFF; /* iOS blue */
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                padding: 15px 20px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                font-size: 18px;
+                font-weight: 500;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                transition: background-color 0.2s, transform 0.1s;
+            }
+            
+            a:active {
+                background-color: #0062CC;
+                transform: scale(0.98);
+            }
+            
+            a:last-child {
+                margin-bottom: 0;
+                background-color: #FF3B30; /* red for close action */
+            }
+            
+            a:last-child:active {
+                background-color: #D70015;
+            }
+        </style>
     </head>
     <body>
-        <a href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F">Open Onboarding</a>
+        <a href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F">Open Onboarding (alicepro://open-promo-checkout?url=<encoded_promo_checkout_url>)</a>
     </body>
 </html>
