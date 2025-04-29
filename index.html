@@ -41,7 +41,14 @@
         </style>
     </head>
     <body>
-        <a href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F">Open Onboarding in Bro (alicepro://open-promo-checkout)</a>
-        <a href="ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F">Open Onboarding in PP (alicepro://open-promo-checkout)</a>
+        <a id="dynamicLink" href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F">Open Onboarding (alicepro://open-promo-checkout)</a>
+        <a href="#">Close</a>
+
+        <script>
+            // Check if user agent contains YaApp_iOS/
+            if (navigator.userAgent.includes('YaApp_iOS/')) {
+                document.getElementById('dynamicLink').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F";
+            }
+        </script>
     </body>
 </html>
