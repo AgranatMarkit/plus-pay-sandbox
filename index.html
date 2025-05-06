@@ -42,13 +42,6 @@
     </head>
     <body>
         <a id="dynamicLink1" href="alicepro://open-promo-checkout?url=https%3A%2F%2Fbrowser.brpages-test.yandex.ru%2Falice-pro%3Ffrom%3Dalert%26page%3Dsales_land_search_superapp_pro">Open Real Page (url https://.../alice-pro?from=alert&page=sales_land_search_superapp_pro)</a>
-        <a id="dynamicLink2" href="yandexbrowser-open-url://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F">Open Github Onboarding Test Page (deeplink alicepro://open-promo-checkout)</a>
-        <script>
-            // Check if user agent contains YaApp_iOS/
-            if (navigator.userAgent.includes('YaApp_iOS/')) {
-                document.getElementById('dynamicLink1').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fbrowser.brpages-test.yandex.ru%252Falice-pro%253Ffrom%253Dalert%2526page%253Dsales_land_search_superapp_pro";
-                document.getElementById('dynamicLink2').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-promo-checkout%3Furl%3Dhttps%253A%252F%252Fagranatmarkit.github.io%252Fplus-pay-sandbox%252Fpromo%252F";
-            }
-        </script>
+        <a id="dynamicLink2" href="alicepro://open-promo-checkout?url=https%3A%2F%2Fagranatmarkit.github.io%2Fplus-pay-sandbox%2Fpromo%2F">Open Github Onboarding Test Page (deeplink alicepro://open-promo-checkout)</a>
     </body>
 </html>
