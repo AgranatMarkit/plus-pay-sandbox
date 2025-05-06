@@ -43,13 +43,5 @@
     <body>
         <a id="openLink" href="alicepro://open-checkout?page=a&place=b&from=c&position=0">Open Checkout (alicepro://open-checkout)</a>
         <a id="closeLink" href="alicepro://close-promo-checkout">Close Onboarding (alicepro://close-promo-checkout)</a>
-
-        <script>
-            // Check if user agent contains YaApp_iOS/
-            if (navigator.userAgent.includes('YaApp_iOS/')) {
-                document.getElementById('openLink').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fopen-checkout%3Fpage%3Da%26place%3Db%26from%3Dc%26position%3D0";
-                document.getElementById('closeLink').href = "ya-search-app-open://?uri=alicepro%3A%2F%2Fclose-promo-checkout";
-            }
-        </script>
     </body>
 </html>
